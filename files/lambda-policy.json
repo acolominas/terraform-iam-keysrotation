@@ -11,13 +11,17 @@
             "Resource": "*"
         },
         {
-        "Effect" : "Allow",
-            "Action" : [
-                "kms:Decrypt"
-                ],
-            "Resource" : [
-              "*"
-              ]
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListUsers",
+                "iam:CreateAccessKey",
+                "iam:DeleteAccessKey",
+                "iam:GetAccessKeyLastUsed",
+                "iam:GetUser",
+                "iam:ListAccessKeys",
+                "iam:UpdateAccessKey"
+            ],
+            "Resource": "*"
         }
     ]
 }

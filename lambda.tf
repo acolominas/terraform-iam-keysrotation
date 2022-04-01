@@ -12,4 +12,12 @@ resource "aws_lambda_function" "this" {
   filename         = "${path.module}/files/iam-keys-rotation.zip"
   role             = aws_iam_role.this.arn
   source_code_hash = data.archive_file.this.output_base64sha256
+
+
+  environment {
+    variables = {
+      USERS = "drone-prd-ci,drone-stg-ci"
+      DAYS  = "0"
+    }
+  }
 }
