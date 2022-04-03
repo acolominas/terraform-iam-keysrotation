@@ -23,7 +23,7 @@ resource "aws_iam_policy" "this" {
   path        = "/"
   description = "Lambda Policy"
 
-  policy = file("${path.module}/files/lambda-policy.json")
+  policy = data.template_file.lambda-policy.rendered
 }
 
 resource "aws_iam_policy_attachment" "this" {

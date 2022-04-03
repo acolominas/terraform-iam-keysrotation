@@ -22,6 +22,13 @@
                 "iam:UpdateAccessKey"
             ],
             "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:*"
+            ],
+            "Resource": "arn:aws:secretsmanager:${account_id}:${aws_region}:secret:iam/*"
         }
     ]
 }
