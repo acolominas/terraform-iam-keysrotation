@@ -16,8 +16,8 @@ resource "aws_lambda_function" "this" {
 
   environment {
     variables = {
-      USERS = "drone-prd-ci,drone-stg-ci"
-      DAYS  = "0"
+      USERS = var.users
+      DAYS  = var.days
     }
   }
 }
