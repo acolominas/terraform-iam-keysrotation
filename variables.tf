@@ -1,10 +1,10 @@
 variable "days" {
-  type    = string
+  type        = string
   description = "Number of days to rotate keys"
-  default = "90"
+  default     = "90"
 }
 
 variable "users" {
-  type = string
+  type        = string
   description = "Coma-separated string with IAM users to rotate keys"
 }
